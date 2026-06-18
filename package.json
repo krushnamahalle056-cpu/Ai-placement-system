@@ -1,0 +1,26 @@
+{
+  "name": "ideaprojects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krushnamahalle056-cpu/Ai-placement-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/krushnamahalle056-cpu/Ai-placement-system/issues"
+  },
+  "homepage": "https://github.com/krushnamahalle056-cpu/Ai-placement-system#readme",
+  "dependencies": {
+    "body-parser": "^2.3.0",
+    "express": "^5.2.1"
+  }
+}
