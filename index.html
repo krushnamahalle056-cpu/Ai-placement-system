@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">MyPortfolio</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">[Aapka Naam]</span></h1>
+            <p>Welcome to my professional portfolio web space.</p>
+            <a href="#contact" class="btn">Connect With Me</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p class="about-text">[Apne baare mein ek chhota sa introduction yahan likhein. Jaise aap kis field ki padhai kar rahe hain aur aapka main interest kis cheez mein hai.]</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">Frontend (HTML, CSS, JS)</div>
+            <div class="skill-card">Backend Development</div>
+            <div class="skill-card">Core Engineering / Systems</div>
+            <div class="skill-card">Database Management</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>Ek short aur informative description aapke pahle project ke baare mein.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>Aapke dusre major ya minor project ki details aur uski tech stack.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
