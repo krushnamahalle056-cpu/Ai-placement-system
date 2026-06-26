@@ -20,6 +20,6 @@ if(R==3){
     console.log("something is happen");
 }else{
     for(let i=1; i<=d; i++){
-        console.log(i+`my name is Krushna`);
+        console.log(i+` My name is Krushna`);
     }
 }
