@@ -5,12 +5,18 @@ function add(){
     console.log("addition of two numbers : "+ c)
 };
 
+add();
+
 let d = a-b;
 function sub(){
     console.log("subtraction of two numbers : " + d);
 };
 
-if(d==3){
+sub();
+
+let R = sub();
+
+if(R==3){
     console.log("something is happen");
 }else{
     for(let i=1; i<=d; i++){
