@@ -28,3 +28,11 @@
     background: #4338ca; 
 }
 
+/* Added Profile Image Hover Effect */
+.profile-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3); /* Subtle primary color glow */
+}
