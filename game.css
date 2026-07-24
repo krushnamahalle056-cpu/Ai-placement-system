@@ -52,3 +52,9 @@ canvas {
     border: 1px solid #00ffcc;
     border-radius: 5px;
 }
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
