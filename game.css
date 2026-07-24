@@ -63,3 +63,12 @@ input[type="range"] {
     accent-color: #ff0055;
     cursor: pointer;
 }
+
+select {
+    background-color: #000;
+    color: #00ffcc;
+    border: 1px solid #00ffcc;
+    padding: 5px;
+    font-family: inherit;
+    cursor: pointer;
+}
