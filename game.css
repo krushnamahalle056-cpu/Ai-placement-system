@@ -58,3 +58,8 @@ label {
     margin-bottom: 8px;
     font-size: 14px;
 }
+
+input[type="range"] {
+    accent-color: #ff0055;
+    cursor: pointer;
+}
