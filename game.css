@@ -72,3 +72,17 @@ select {
     font-family: inherit;
     cursor: pointer;
 }
+
+button {
+    background-color: transparent;
+    color: #ff0055;
+    border: 2px solid #ff0055;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(255, 0, 85, 0.3);
+}
