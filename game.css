@@ -11,3 +11,10 @@ body {
     margin: 0;
     overflow: hidden;
 }
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #00ffcc;
+    margin-bottom: 5px;
+}
