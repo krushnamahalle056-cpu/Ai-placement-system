@@ -27,3 +27,11 @@ h1 {
     padding: 20px;
     text-align: center;
 }
+
+canvas {
+    background-color: #001a14;
+    border: 1px solid #004d40;
+    border-radius: 5px;
+    box-shadow: inset 0 0 15px rgba(0, 255, 204, 0.1);
+    margin-bottom: 20px;
+}
