@@ -99,3 +99,10 @@ button:hover {
     font-weight: bold;
     min-height: 25px;
 }
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
