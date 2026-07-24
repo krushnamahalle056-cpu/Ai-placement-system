@@ -18,3 +18,12 @@ h1 {
     text-shadow: 0 0 10px #00ffcc;
     margin-bottom: 5px;
 }
+
+#game-board {
+    background-color: #050505;
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+    padding: 20px;
+    text-align: center;
+}
