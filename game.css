@@ -92,3 +92,10 @@ button:hover {
     color: #fff;
     box-shadow: 0 0 20px rgba(255, 0, 85, 0.8);
 }
+
+#status {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 25px;
+}
