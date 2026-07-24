@@ -35,3 +35,10 @@ canvas {
     box-shadow: inset 0 0 15px rgba(0, 255, 204, 0.1);
     margin-bottom: 20px;
 }
+
+.controls-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
