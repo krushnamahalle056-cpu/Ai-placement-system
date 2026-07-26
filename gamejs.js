@@ -10,3 +10,11 @@ let targetSignal = {
     freq: 3,
     amp: 60
 };
+
+
+// DOM Elements
+const waveTypeInput = document.getElementById('waveType');
+const freqInput = document.getElementById('frequency');
+const ampInput = document.getElementById('amplitude');
+const statusText = document.getElementById('status');
+const levelDisplay = document.getElementById('level-display');
