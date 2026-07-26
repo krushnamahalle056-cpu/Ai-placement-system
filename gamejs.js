@@ -6,7 +6,7 @@ let level = 1;
 
 // Naye variables Time aur Score ke liye
 let score = 0;
-let timeLeft = 15; // Har level ke liye 15 seconds
+let timeLeft = 25; // Har level ke liye 15 seconds
 let timerInterval;
 let isGameOver = false;
 
