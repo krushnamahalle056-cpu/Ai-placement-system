@@ -133,3 +133,5 @@ function checkSync() {
     }
 }
 
+// Start game
+animate();
