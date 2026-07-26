@@ -35,3 +35,17 @@ function generateNewTarget() {
     targetSignal.freq = (Math.floor(Math.random() * 18) + 2) / 2; 
     targetSignal.amp = Math.floor(Math.random() * 16) * 5 + 20;
 }
+
+// Wave ka Y-coordinate calculate karna
+function calculateY(type, x, t, freq, amp) {
+    let phase = (x * 0.02 * freq) - t; 
+    
+    if (type === 'sine') {
+        return Math.sin(phase) * amp;
+    } else if (type === 'square') {
+        return Math.sign(Math.sin(phase)) * amp;
+    } else if (type === 'triangle') {
+        return Math.asin(Math.sin(phase)) * (2 / Math.PI) * amp;
+    }
+    return 0;
+}
