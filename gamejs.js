@@ -27,3 +27,11 @@ function generateNewTarget() {
     targetSignal.freq = (Math.floor(Math.random() * 18) + 2) / 2; 
     targetSignal.amp = Math.floor(Math.random() * 16) * 5 + 20;
 }
+
+// Random signal generator next level ke liye
+function generateNewTarget() {
+    const types = ['sine', 'square', 'triangle'];
+    targetSignal.type = types[Math.floor(Math.random() * types.length)];
+    targetSignal.freq = (Math.floor(Math.random() * 18) + 2) / 2; 
+    targetSignal.amp = Math.floor(Math.random() * 16) * 5 + 20;
+}
