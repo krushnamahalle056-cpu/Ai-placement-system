@@ -18,3 +18,12 @@ const freqInput = document.getElementById('frequency');
 const ampInput = document.getElementById('amplitude');
 const statusText = document.getElementById('status');
 const levelDisplay = document.getElementById('level-display');
+
+
+// Random signal generator next level ke liye
+function generateNewTarget() {
+    const types = ['sine', 'square', 'triangle'];
+    targetSignal.type = types[Math.floor(Math.random() * types.length)];
+    targetSignal.freq = (Math.floor(Math.random() * 18) + 2) / 2; 
+    targetSignal.amp = Math.floor(Math.random() * 16) * 5 + 20;
+}
