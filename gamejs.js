@@ -98,3 +98,12 @@ function animate() {
 
 }
 
+// Sync checking logic
+function checkSync() {
+    let playerType = waveTypeInput.value;
+    let playerFreq = parseFloat(freqInput.value);
+    let playerAmp = parseFloat(ampInput.value);
+
+   
+}
+
