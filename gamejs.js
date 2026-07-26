@@ -87,6 +87,14 @@ function animate() {
     // Target Wave (Red)
     drawWave(targetSignal.type, targetSignal.freq, targetSignal.amp, '#ff0055', 3);
 
+    // Player Wave (Cyan)
+    let playerType = waveTypeInput.value;
+    let playerFreq = parseFloat(freqInput.value);
+    let playerAmp = parseFloat(ampInput.value);
+    drawWave(playerType, playerFreq, playerAmp, '#00ffcc', 3);
 
+    time += 0.05; 
+    requestAnimationFrame(animate);
 
 }
+
