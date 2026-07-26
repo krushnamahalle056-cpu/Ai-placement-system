@@ -58,5 +58,15 @@ function drawWave(type, freq, amp, color, lineWidth) {
     ctx.shadowBlur = 10;
     ctx.shadowColor = color;
 
+    for (let x = 0; x < canvas.width; x++) {
+    let y = canvas.height / 2 + calculateY(type, x, time, freq, amp);
+    if (x === 0) {
+        ctx.moveTo(x, y);
+    } else {
+        ctx.lineTo(x, y);
+    }
+    }
+    ctx.stroke();
+    ctx.shadowBlur = 0; 
 
 }
