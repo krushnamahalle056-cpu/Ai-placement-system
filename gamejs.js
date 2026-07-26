@@ -76,5 +76,13 @@ function drawWave(type, freq, amp, color, lineWidth) {
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    // Center grid line
+    ctx.beginPath();
+    ctx.strokeStyle = '#003322';
+    ctx.lineWidth = 1;
+    ctx.moveTo(0, canvas.height / 2);
+    ctx.lineTo(canvas.width, canvas.height / 2);
+    ctx.stroke();
+
 
 }
