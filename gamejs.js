@@ -70,3 +70,11 @@ function drawWave(type, freq, amp, color, lineWidth) {
     ctx.shadowBlur = 0; 
 
 }
+
+
+// Animation Loop 
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+
+}
