@@ -84,5 +84,9 @@ function animate() {
     ctx.lineTo(canvas.width, canvas.height / 2);
     ctx.stroke();
 
+    // Target Wave (Red)
+    drawWave(targetSignal.type, targetSignal.freq, targetSignal.amp, '#ff0055', 3);
+
+
 
 }
