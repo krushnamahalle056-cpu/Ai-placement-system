@@ -114,3 +114,7 @@ button:hover {
     100% { color: #ff0055; text-shadow: 0 0 10px #ff0055; }
 }
 
+.time-low {
+    animation: flashRed 1s infinite;
+    font-size: 22px;
+}
