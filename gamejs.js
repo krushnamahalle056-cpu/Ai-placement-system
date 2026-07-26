@@ -104,6 +104,32 @@ function checkSync() {
     let playerFreq = parseFloat(freqInput.value);
     let playerAmp = parseFloat(ampInput.value);
 
-   
+    if (playerType === targetSignal.type && 
+        playerFreq === targetSignal.freq && 
+        playerAmp === targetSignal.amp) {
+        
+        statusText.style.color = "#00ffcc";
+        statusText.innerText = "SYSTEM SYNCED! Proceeding to next level...";
+        
+        setTimeout(() => {
+            level++;
+            levelDisplay.innerText = level;
+            generateNewTarget();
+            statusText.innerText = "Adjust parameters to match the red signal...";
+            statusText.style.color = "#ff0055";
+            
+            waveTypeInput.value = 'sine';
+            freqInput.value = 1;
+            ampInput.value = 50;
+        }, 2000);
+
+    } else {
+        statusText.style.color = "#ff0000";
+        statusText.innerText = "SYNC FAILED. Frequencies do not match.";
+        setTimeout(() => {
+            statusText.innerText = "Adjust parameters to match the red signal...";
+            statusText.style.color = "#ff0055";
+        }, 1500);
+    }
 }
 
