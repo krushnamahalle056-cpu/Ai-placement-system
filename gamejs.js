@@ -49,3 +49,14 @@ function calculateY(type, x, t, freq, amp) {
     }
     return 0;
 }
+
+// Canvas par wave draw karna
+function drawWave(type, freq, amp, color, lineWidth) {
+    ctx.beginPath();
+    ctx.strokeStyle = color;
+    ctx.lineWidth = lineWidth;
+    ctx.shadowBlur = 10;
+    ctx.shadowColor = color;
+
+
+}
