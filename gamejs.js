@@ -164,7 +164,8 @@ function checkSync() {
 
     if (playerType === targetSignal.type && 
         playerFreq === targetSignal.freq && 
-        playerAmp === targetSignal.amp) {
+        playerAmp === targetSignal.amp &&
+        playerPhase === targetSignal.phase) {
         
         clearInterval(timerInterval); // Time freeze kar do jab match ho jaye
         
