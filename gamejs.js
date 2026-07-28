@@ -112,7 +112,7 @@ function calculateY(type, x, t, freq, amp, phaseDeg) {
 }
 
 // Canvas par wave draw karna
-function drawWave(type, freq, amp, color, lineWidth) {
+function drawWave(type, freq, amp, phase, color, lineWidth) {
     ctx.beginPath();
     ctx.strokeStyle = color;
     ctx.lineWidth = lineWidth;
@@ -120,14 +120,13 @@ function drawWave(type, freq, amp, color, lineWidth) {
     ctx.shadowColor = color;
 
     for (let x = 0; x < canvas.width; x++) {
-        let y = canvas.height / 2 + calculateY(type, x, time, freq, amp);
+        let y = canvas.height / 2 + calculateY(type, x, time, freq, amp, phase);
         if (x === 0) ctx.moveTo(x, y);
         else ctx.lineTo(x, y);
     }
     ctx.stroke();
     ctx.shadowBlur = 0; 
 }
-
 // Animation Loop 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
