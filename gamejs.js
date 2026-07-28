@@ -142,7 +142,13 @@ function animate() {
 // Target Wave (Red)
     drawWave(targetSignal.type, targetSignal.freq, targetSignal.amp, targetSignal.phase, '#ff0055', 3);
 
-
+    // Player Wave (Cyan)
+    let playerType = waveTypeInput.value;
+    let playerFreq = parseFloat(freqInput.value);
+    let playerAmp = parseFloat(ampInput.value);
+    let playerPhase = parseFloat(phaseInput.value); // Naya input
+    drawWave(playerType, playerFreq, playerAmp, playerPhase, '#00ffcc', 3);
+    
     time += 0.05; 
     requestAnimationFrame(animate);
 }
