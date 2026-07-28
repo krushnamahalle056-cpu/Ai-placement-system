@@ -14,7 +14,8 @@ let isGameOver = false;
 let targetSignal = {
     type: 'sine',
     freq: 3,
-    amp: 60
+    amp: 60,
+    phase: 0,
 };
 
 // DOM Elements
@@ -34,6 +35,7 @@ function generateNewTarget() {
     targetSignal.type = types[Math.floor(Math.random() * types.length)];
     targetSignal.freq = (Math.floor(Math.random() * 18) + 2) / 2; 
     targetSignal.amp = Math.floor(Math.random() * 16) * 5 + 20;
+    
 }
 
 // Timer Logic
