@@ -127,6 +127,7 @@ function drawWave(type, freq, amp, phase, color, lineWidth) {
     ctx.stroke();
     ctx.shadowBlur = 0; 
 }
+
 // Animation Loop 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -138,14 +139,9 @@ function animate() {
     ctx.lineTo(canvas.width, canvas.height / 2);
     ctx.stroke();
 
-    // Target Wave (Red)
-    drawWave(targetSignal.type, targetSignal.freq, targetSignal.amp, '#ff0055', 3);
+// Target Wave (Red)
+    drawWave(targetSignal.type, targetSignal.freq, targetSignal.amp, targetSignal.phase, '#ff0055', 3);
 
-    // Player Wave (Cyan)
-    let playerType = waveTypeInput.value;
-    let playerFreq = parseFloat(freqInput.value);
-    let playerAmp = parseFloat(ampInput.value);
-    drawWave(playerType, playerFreq, playerAmp, '#00ffcc', 3);
 
     time += 0.05; 
     requestAnimationFrame(animate);
