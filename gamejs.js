@@ -26,6 +26,7 @@ const levelDisplay = document.getElementById('level-display');
 const scoreDisplay = document.getElementById('score-display');
 const timerDisplay = document.getElementById('timer-display');
 const syncButton = document.querySelector('button');
+const phaseInput = document.getElementById('phase');
 
 // Random signal generator next level ke liye
 function generateNewTarget() {
