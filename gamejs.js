@@ -98,12 +98,16 @@ function restartGame() {
     startTimer();
 }
 
-// Wave ka Y-coordinate calculate karna
-function calculateY(type, x, t, freq, amp) {
-    let phase = (x * 0.02 * freq) - t; 
-    if (type === 'sine') return Math.sin(phase) * amp;
-    if (type === 'square') return Math.sign(Math.sin(phase)) * amp;
-    if (type === 'triangle') return Math.asin(Math.sin(phase)) * (2 / Math.PI) * amp;
+// Wave ka Y-coordinate calculate karna (Phase shift ke sath)
+function calculateY(type, x, t, freq, amp, phaseDeg) {
+    // Degrees to Radians conversion
+    let phaseRad = phaseDeg * (Math.PI / 180); 
+    // Time shifting logic
+    let wavePhase = (x * 0.02 * freq) - t + phaseRad; 
+    
+    if (type === 'sine') return Math.sin(wavePhase) * amp;
+    if (type === 'square') return Math.sign(Math.sin(wavePhase)) * amp;
+    if (type === 'triangle') return Math.asin(Math.sin(wavePhase)) * (2 / Math.PI) * amp;
     return 0;
 }
 
