@@ -35,7 +35,7 @@ function generateNewTarget() {
     targetSignal.type = types[Math.floor(Math.random() * types.length)];
     targetSignal.freq = (Math.floor(Math.random() * 18) + 2) / 2; 
     targetSignal.amp = Math.floor(Math.random() * 16) * 5 + 20;
-    
+    targetSignal.phase = Math.floor(Math.random() * 5) * 45;
 }
 
 // Timer Logic
