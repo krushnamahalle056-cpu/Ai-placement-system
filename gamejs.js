@@ -157,8 +157,9 @@ function animate() {
     ctx.lineTo(canvas.width, canvas.height / 2);
     ctx.stroke();
 
-// Target Wave (Red)
-    drawWave(targetSignal.type, targetSignal.freq, targetSignal.amp, targetSignal.phase, '#ff0055', 3);
+   // Agar filter ON hai, toh noise 0 kar do, warna target ka noise dikhao
+    let activeNoise = filterCheckbox.checked ? 0 : targetSignal.noise;
+    drawWave(targetSignal.type, targetSignal.freq, targetSignal.amp, targetSignal.phase, '#ff0055', 3, activeNoise);
 
     // Player Wave (Cyan)
     let playerType = waveTypeInput.value;
@@ -215,6 +216,8 @@ function checkSync() {
             freqInput.value = 1;
             ampInput.value = 50;
             phaseInput.value = 0;
+
+            
             
             isTransitioning = false; // Transition khatam
             startTimer(); // Naya timer start karo
