@@ -239,5 +239,8 @@ function toggleAudio() {
         
         oscillator.start();
     }
+    
+    const audioBtn = document.getElementById('audio-toggle');
 
+ 
 }
