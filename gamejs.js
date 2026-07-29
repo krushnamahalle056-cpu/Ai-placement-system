@@ -45,6 +45,8 @@ function generateNewTarget() {
     targetSignal.freq = (Math.floor(Math.random() * 18) + 2) / 2; 
     targetSignal.amp = Math.floor(Math.random() * 16) * 5 + 20;
     targetSignal.phase = Math.floor(Math.random() * 5) * 45;
+    // NAYA LOGIC: Level 1 ke baad noise badhao
+    targetSignal.noise = level > 1 ? (level * 8) : 0;
 }
 
 // Timer Logic
