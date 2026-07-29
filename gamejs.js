@@ -9,6 +9,7 @@ let score = 0;
 let timeLeft = 45; // Har level ke liye 45 seconds
 let timerInterval;
 let isGameOver = false;
+let isTransitioning = false; // NAYA VARIABLE ADD KIYA
 
 // Target Signal (Jo player ko match karna hai)
 let targetSignal = {
