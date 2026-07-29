@@ -276,3 +276,9 @@ function updateAudio() {
     // Game ke amplitude (10-100) ko safe volume (0.02 - 0.2) mein convert kiya taaki kaan kharab na hon
     gainNode.gain.setValueAtTime(amp * 0.002, audioCtx.currentTime);
 }
+
+// Sliders ke saath Event Listeners jod dein taaki move karte hi sound badle
+waveTypeInput.addEventListener('input', updateAudio);
+freqInput.addEventListener('input', updateAudio);
+ampInput.addEventListener('input', updateAudio);
+
