@@ -217,7 +217,7 @@ function checkSync() {
             ampInput.value = 50;
             phaseInput.value = 0;
 
-            
+            filterCheckbox.checked = false;
             
             isTransitioning = false; // Transition khatam
             startTimer(); // Naya timer start karo
