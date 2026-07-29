@@ -125,8 +125,8 @@ function calculateY(type, x, t, freq, amp, phaseDeg) {
     return 0;
 }
 
-// Canvas par wave draw karna
-function drawWave(type, freq, amp, phase, color, lineWidth) {
+// Canvas par wave draw karna (Noise ke sath)
+function drawWave(type, freq, amp, phase, color, lineWidth, noiseValue = 0) {
     ctx.beginPath();
     ctx.strokeStyle = color;
     ctx.lineWidth = lineWidth;
@@ -134,7 +134,11 @@ function drawWave(type, freq, amp, phase, color, lineWidth) {
     ctx.shadowColor = color;
 
     for (let x = 0; x < canvas.width; x++) {
-        let y = canvas.height / 2 + calculateY(type, x, time, freq, amp, phase);
+        // NAYA: Random noise generate karna
+        let currentNoise = (Math.random() - 0.5) * noiseValue;
+        
+        let y = canvas.height / 2 + calculateY(type, x, time, freq, amp, phase) + currentNoise;
+        
         if (x === 0) ctx.moveTo(x, y);
         else ctx.lineTo(x, y);
     }
