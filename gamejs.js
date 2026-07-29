@@ -224,3 +224,20 @@ function checkSync() {
 // Game Start karte hi timer aur animation chalu karein
 animate();
 startTimer();
+
+// --- WEB AUDIO API ENGINE ---
+
+function toggleAudio() {
+    // Agar audio system abhi tak start nahi hua hai, toh usko banayein
+    if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        oscillator = audioCtx.createOscillator();
+        gainNode = audioCtx.createGain();
+
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        
+        oscillator.start();
+    }
+
+}
