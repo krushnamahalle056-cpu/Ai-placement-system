@@ -242,5 +242,19 @@ function toggleAudio() {
     
     const audioBtn = document.getElementById('audio-toggle');
 
- 
+    if (isAudioPlaying) {
+        // Sound Mute karein
+        gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+        audioBtn.innerText = "Turn On Sound 🔊";
+        audioBtn.style.color = "#00ffcc";
+        audioBtn.style.borderColor = "#00ffcc";
+        isAudioPlaying = false;
+    } else {
+        // Sound Play karein
+        isAudioPlaying = true;
+        updateAudio(); // Current sliders ke hisaab se sound set karein
+        audioBtn.innerText = "Turn Off Sound 🔇";
+        audioBtn.style.color = "#ff0055";
+        audioBtn.style.borderColor = "#ff0055";
+    }
 }
