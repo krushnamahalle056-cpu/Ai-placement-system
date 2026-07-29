@@ -156,21 +156,23 @@ function animate() {
 
 // Sync checking logic
 function checkSync() {
-    if (isGameOver) return; // Agar game over ho gaya hai toh button kaam nahi karega
+    // BUG FIX: Agar game over hai YA next level load ho raha hai, toh click ko ignore karo
+    if (isGameOver || isTransitioning) return; 
 
     let playerType = waveTypeInput.value;
     let playerFreq = parseFloat(freqInput.value);
     let playerAmp = parseFloat(ampInput.value);
     let playerPhase = parseFloat(phaseInput.value);
 
+    // Ab 4 cheezein match honi chahiye
     if (playerType === targetSignal.type && 
         playerFreq === targetSignal.freq && 
         playerAmp === targetSignal.amp &&
         playerPhase === targetSignal.phase) {
         
-        clearInterval(timerInterval); // Time freeze kar do jab match ho jaye
+        clearInterval(timerInterval); // Timer turant rok do
+        isTransitioning = true;       // Game ko transition state (loading) mein daalo
         
-        // Jitni jaldi sync kiya, utne zyada points
         let pointsEarned = 100 + (timeLeft * 10);
         score += pointsEarned;
         scoreDisplay.innerText = score;
@@ -183,25 +185,29 @@ function checkSync() {
             levelDisplay.innerText = level;
             generateNewTarget();
             
-            // Naye level ke liye time reset
+            // Naye level ke liye time properly reset karo
             timeLeft = 15;
+            timerDisplay.classList.remove('time-low'); // Red flash hatao
             timerDisplay.innerText = timeLeft;
             
             statusText.innerText = "Adjust parameters to match the red signal...";
             statusText.style.color = "#ff0055";
             
+            // Sliders reset karo
             waveTypeInput.value = 'sine';
             freqInput.value = 1;
             ampInput.value = 50;
+            phaseInput.value = 0;
             
-            startTimer(); // Phir se timer chalu
+            isTransitioning = false; // Transition khatam
+            startTimer(); // Naya timer start karo
         }, 2000);
 
     } else {
         statusText.style.color = "#ff0000";
-        statusText.innerText = "SYNC FAILED. Frequencies do not match.";
+        statusText.innerText = "SYNC FAILED. Parameters do not match.";
         setTimeout(() => {
-            if (!isGameOver) {
+            if (!isGameOver && !isTransitioning) {
                 statusText.innerText = "Adjust parameters to match the red signal...";
                 statusText.style.color = "#ff0055";
             }
