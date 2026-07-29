@@ -1,5 +1,6 @@
 const canvas = document.getElementById('oscilloscope');
 const ctx = canvas.getContext('2d');
+const filterCheckbox = document.getElementById('filterToggle');
 
 let time = 0;
 let level = 1;
