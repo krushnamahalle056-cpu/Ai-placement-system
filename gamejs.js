@@ -185,8 +185,8 @@ function checkSync() {
             levelDisplay.innerText = level;
             generateNewTarget();
             
-            // Naye level ke liye time properly reset karo
-            timeLeft = 15;
+           // Naye level ke liye time properly reset karo
+            timeLeft = 45; // Ise 15 se badalkar 45 kar dein
             timerDisplay.classList.remove('time-low'); // Red flash hatao
             timerDisplay.innerText = timeLeft;
             
