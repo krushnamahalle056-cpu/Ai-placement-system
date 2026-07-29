@@ -45,10 +45,16 @@
 
         </div>
         
-       
+       <!-- Audio Button  -->
         <button id="audio-toggle" onclick="toggleAudio()" style="margin-bottom: 15px; border-color: #00ffcc; color: #00ffcc;">
             Turn On Sound 🔊
         </button>
+
+        <!-- NAYA CODE: Filter Toggle -->
+        <div style="margin-bottom: 15px; background: #111; padding: 10px; border: 1px solid #ffaa00; border-radius: 5px; color: #ffaa00; font-weight: bold;">
+            <input type="checkbox" id="filterToggle" style="cursor: pointer; transform: scale(1.5); margin-right: 10px;">
+            <label for="filterToggle" style="cursor: pointer;">Engage Low-Pass Filter (Remove Noise)</label>
+        </div>
 
         <button onclick="checkSync()">Sync Signal</button>
         <div id="status">Adjust parameters to match the red signal...</div>
