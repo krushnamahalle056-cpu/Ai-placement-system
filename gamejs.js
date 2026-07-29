@@ -24,6 +24,7 @@ let targetSignal = {
     freq: 3,
     amp: 60,
     phase: 0,
+    noise: 0    // Shuru mein koi noise nahi
 };
 
 // DOM Elements
