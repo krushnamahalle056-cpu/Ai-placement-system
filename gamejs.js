@@ -11,6 +11,12 @@ let timerInterval;
 let isGameOver = false;
 let isTransitioning = false; // NAYA VARIABLE ADD KIYA
 
+// Audio Context Variables
+let audioCtx;
+let oscillator;
+let gainNode;
+let isAudioPlaying = false;
+
 // Target Signal (Jo player ko match karna hai)
 let targetSignal = {
     type: 'sine',
