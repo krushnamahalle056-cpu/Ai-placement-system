@@ -73,6 +73,9 @@ function gameOver() {
     isGameOver = true;
     statusText.style.color = "#ff0000";
     statusText.innerText = "TIME OUT! SYSTEM CRASHED. Final Score: " + score;
+
+    // NAYI LINE: Game over hone par sound band kar do
+    if (isAudioPlaying) toggleAudio();
     
     // Button ko Restart button mein badal do
     syncButton.innerText = "Restart System";
