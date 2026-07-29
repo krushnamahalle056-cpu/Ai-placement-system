@@ -258,3 +258,21 @@ function toggleAudio() {
         audioBtn.style.borderColor = "#ff0055";
     }
 }
+
+// Jab sliders move honge, toh ye function sound change karega
+function updateAudio() {
+    if (!isAudioPlaying || !oscillator) return;
+
+    let type = waveTypeInput.value;
+    let freq = parseFloat(freqInput.value);
+    let amp = parseFloat(ampInput.value);
+
+    // Audio properties update karein
+    oscillator.type = type;
+    
+    // Game ki frequency (1-10) ko real audible frequency (100Hz - 1000Hz) mein convert kiya
+    oscillator.frequency.setValueAtTime(freq * 100, audioCtx.currentTime);
+    
+    // Game ke amplitude (10-100) ko safe volume (0.02 - 0.2) mein convert kiya taaki kaan kharab na hon
+    gainNode.gain.setValueAtTime(amp * 0.002, audioCtx.currentTime);
+}
