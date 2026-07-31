@@ -16,3 +16,12 @@ h2 {
     color: #333;
     margin-bottom: 20px;
 }
+
+.flashcard {
+    background-color: transparent;
+    width: 350px;
+    height: 250px;
+    perspective: 1000px; /* 3D effect ke liye zaroori hai */
+    margin: 0 auto 30px auto;
+    cursor: pointer;
+}
