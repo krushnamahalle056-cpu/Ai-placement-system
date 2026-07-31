@@ -66,3 +66,9 @@ h2 {
     color: white;
     transform: rotateY(180deg);
 }
+
+.hint {
+    font-size: 13px;
+    color: #888;
+    margin-top: 20px;
+}
