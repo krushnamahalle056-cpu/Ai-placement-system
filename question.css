@@ -60,3 +60,9 @@ h2 {
     color: #333;
     border-top: 5px solid #007bff;
 }
+
+.card-back {
+    background-color: #007bff;
+    color: white;
+    transform: rotateY(180deg);
+}
