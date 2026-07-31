@@ -34,3 +34,9 @@ h2 {
     transition: transform 0.6s;
     transform-style: preserve-3d;
 }
+
+/* Jab card par 'flipped' class aayegi tab ye ghumega */
+.flashcard.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
