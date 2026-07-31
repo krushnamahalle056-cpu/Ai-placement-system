@@ -10,7 +10,22 @@
     <div class="container">
         <h2>Concept Revision</h2>
         
-  
+        <!-- Flashcard Area -->
+        <div class="flashcard" onclick="flipCard()">
+            <div class="card-inner" id="card-inner">
+                <!-- Front Side (Question) -->
+                <div class="card-front">
+                    <h3 id="question">Question loading...</h3>
+                    <p class="hint">Click to flip ↺</p>
+                </div>
+                <!-- Back Side (Answer) -->
+                <div class="card-back">
+                    <h3 id="answer">Answer loading...</h3>
+                </div>
+            </div>
+        </div>
+
+       
     </div>
 
     <script src="script.js"></script>
