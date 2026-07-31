@@ -54,3 +54,9 @@ h2 {
     padding: 20px;
     box-sizing: border-box;
 }
+
+.card-front {
+    background-color: #ffffff;
+    color: #333;
+    border-top: 5px solid #007bff;
+}
