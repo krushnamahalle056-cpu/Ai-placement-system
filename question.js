@@ -5,5 +5,9 @@ const cardsData = [
         question: "What is Time Shifting?", 
         answer: "A signal is delayed or advanced in time. Equation: y(t) = x(t - t0)." 
     },
-
+    { 
+        question: "What is Time Scaling?", 
+        answer: "Compression or expansion of a signal in time. Equation: y(t) = x(at)." 
+    },
+  
 ];
