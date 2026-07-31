@@ -13,6 +13,9 @@ const cardsData = [
         question: "What is a Class B Amplifier?", 
         answer: "An amplifier where the active device conducts for only 180 degrees (half) of the input cycle." 
     },
-   
+    { 
+        question: "Difference between Let and Const in JS?", 
+        answer: "'let' can be reassigned, but 'const' cannot be reassigned after initialization." 
+    }
   
 ];
