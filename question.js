@@ -33,3 +33,8 @@ function loadCard() {
     // Naya card aane par use wapas seedha (front) kar do
     flashcard.classList.remove('flipped');
 }
+
+// Card ko flip karne ka function
+function flipCard() {
+    flashcard.classList.toggle('flipped');
+}
