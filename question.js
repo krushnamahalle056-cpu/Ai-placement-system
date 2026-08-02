@@ -19,3 +19,8 @@ const cardsData = [
     }
   
 ];
+
+let currentIndex = 0;
+const questionEl = document.getElementById('question');
+const answerEl = document.getElementById('answer');
+const flashcard = document.querySelector('.flashcard');
