@@ -51,3 +51,5 @@ function prevCard() {
     loadCard();
 }
 
+// Shuru mein pehla card load karo
+loadCard();
