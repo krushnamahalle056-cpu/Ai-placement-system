@@ -24,3 +24,12 @@ let currentIndex = 0;
 const questionEl = document.getElementById('question');
 const answerEl = document.getElementById('answer');
 const flashcard = document.querySelector('.flashcard');
+
+// Screen par card load karne ka function
+function loadCard() {
+    questionEl.innerText = cardsData[currentIndex].question;
+    answerEl.innerText = cardsData[currentIndex].answer;
+    
+    // Naya card aane par use wapas seedha (front) kar do
+    flashcard.classList.remove('flipped');
+}
