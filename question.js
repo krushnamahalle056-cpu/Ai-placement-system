@@ -38,3 +38,9 @@ function loadCard() {
 function flipCard() {
     flashcard.classList.toggle('flipped');
 }
+
+// Agla card dikhane ka function
+function nextCard() {
+    currentIndex = (currentIndex + 1) % cardsData.length; // Array ke end ke baad wapas zero par aane ke liye
+    loadCard();
+}
