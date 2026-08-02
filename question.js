@@ -44,3 +44,10 @@ function nextCard() {
     currentIndex = (currentIndex + 1) % cardsData.length; // Array ke end ke baad wapas zero par aane ke liye
     loadCard();
 }
+
+// Pichla card dikhane ka function
+function prevCard() {
+    currentIndex = (currentIndex - 1 + cardsData.length) % cardsData.length;
+    loadCard();
+}
+
