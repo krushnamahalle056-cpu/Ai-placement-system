@@ -86,3 +86,6 @@ button {
     transition: 0.3s;
 }
 
+button:hover {
+    background-color: #555;
+}
